@@ -1,18 +1,18 @@
 ---
 layout: post
-title:  "RecyclerviewÖ§³ÖÏÂÀ­Ë¢ĞÂ¡¢ÉÏÀ­¼ÓÔØ£¬°üÀ¨ÏßĞÔ²¼¾Ö¡¢Íø¸ñ²¼¾ÖºÍ Á÷Ê½²¼¾Ö"
-subtitle:  "RecyclerviewÖ§³ÖÏÂÀ­Ë¢ĞÂ¡¢ÉÏÀ­¼ÓÔØ£¬°üÀ¨ÏßĞÔ²¼¾Ö¡¢Íø¸ñ²¼¾ÖºÍ Á÷Ê½²¼¾Ö"
+title:  "Recyclerviewæ”¯æŒä¸‹æ‹‰åˆ·æ–°ã€ä¸Šæ‹‰åŠ è½½ï¼ŒåŒ…æ‹¬çº¿æ€§å¸ƒå±€ã€ç½‘æ ¼å¸ƒå±€å’Œ æµå¼å¸ƒå±€"
+subtitle:  "Recyclerviewæ”¯æŒä¸‹æ‹‰åˆ·æ–°ã€ä¸Šæ‹‰åŠ è½½ï¼ŒåŒ…æ‹¬çº¿æ€§å¸ƒå±€ã€ç½‘æ ¼å¸ƒå±€å’Œ æµå¼å¸ƒå±€"
 date:  2017-06-26 15:00
 author:  "Mtj"
 tags:
      Android
      Recyclerview
-     ÆÙ²¼Á÷
+     ç€‘å¸ƒæµ
 ---
 
 # SwiperefreshRecyclerview
-## Ö§³ÖÏÂÀ­Ë¢ĞÂ¡¢ÉÏÀ­¼ÓÔØµÄ Recyclerview£¬°üÀ¨ÏßĞÔ²¼¾Ö¡¢Íø¸ñ²¼¾ÖºÍ Á÷²¼¾Ö¡£
-##Ö»ĞèÒªÔÚadapterÖĞ°ó¶¨Êı¾İ£¬ÆäËûµÄ½»¸øÎÒ£¬¾ÍÊÇÕâÃ´6¡£
+## æ”¯æŒä¸‹æ‹‰åˆ·æ–°ã€ä¸Šæ‹‰åŠ è½½çš„ Recyclerviewï¼ŒåŒ…æ‹¬çº¿æ€§å¸ƒå±€ã€ç½‘æ ¼å¸ƒå±€å’Œ æµå¸ƒå±€ã€‚
+## åªéœ€è¦åœ¨adapterä¸­ç»‘å®šæ•°æ®ï¼Œå…¶ä»–çš„äº¤ç»™æˆ‘ï¼Œå°±æ˜¯è¿™ä¹ˆ6ã€‚
 
 ### To get a Git project into your build:
 ### Step 1. Add the JitPack repository to your build file 
@@ -31,32 +31,32 @@ dependencies {
   compile 'com.github.mtjsoft:SwiperefreshRecyclerview:1.1.0'
 }
 ```
-## GitHub Ô´Âë: [SwiperefreshRecyclerviewÔ´Âë](https://github.com/mtjsoft/SwiperefreshRecyclerview)
+## GitHub æºç : [SwiperefreshRecyclerviewæºç ](https://github.com/mtjsoft/SwiperefreshRecyclerview)
 
-## Ê¹ÓÃ Demo: [SwiperefreshRecyclerviewDemo](https://github.com/mtjsoft/SwiperefreshRecyclerviewDemo)
+## ä½¿ç”¨ Demo: [SwiperefreshRecyclerviewDemo](https://github.com/mtjsoft/SwiperefreshRecyclerviewDemo)
 
-### ÏßĞÔ²¼¾Ö:
+### çº¿æ€§å¸ƒå±€:
 
-![ÏßĞÔ²¼¾Ö](http://img.blog.csdn.net/20170624131953706?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjg3NzkwODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![çº¿æ€§å¸ƒå±€](http://img.blog.csdn.net/20170624131953706?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjg3NzkwODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
-### Íø¸ñ²¼¾Ö:
+### ç½‘æ ¼å¸ƒå±€:
 
-![Íø¸ñ²¼¾Ö](http://img.blog.csdn.net/20170624132014859?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjg3NzkwODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![ç½‘æ ¼å¸ƒå±€](http://img.blog.csdn.net/20170624132014859?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjg3NzkwODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
-### Á÷Ê½²¼¾Ö:
+### æµå¼å¸ƒå±€:
 
-![Á÷Ê½²¼¾Ö](http://img.blog.csdn.net/20170624132037025?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjg3NzkwODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![æµå¼å¸ƒå±€](http://img.blog.csdn.net/20170624132037025?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjg3NzkwODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
-## 1¡¢activity ¼Ì³Ğ HHBaseListRecyclerViewActivity: 
- ¢ÙgetListDataInThread()Òì²½»ñÈ¡Êı¾İ¡£
- ¢ÚsetLayoutManagerType()·½·¨¼´¿ÉÊµÏÖ  ÏßĞÔ²¼¾Ö¡¢Íø¸ñ²¼¾Ö ºÍ Á÷²¼¾Ö¡£
+## 1ã€activity ç»§æ‰¿ HHBaseListRecyclerViewActivity: 
+ â‘ getListDataInThread()å¼‚æ­¥è·å–æ•°æ®ã€‚
+ â‘¡setLayoutManagerType()æ–¹æ³•å³å¯å®ç°  çº¿æ€§å¸ƒå±€ã€ç½‘æ ¼å¸ƒå±€ å’Œ æµå¸ƒå±€ã€‚
 
 ```
 /**
-     * Òì²½»ñÈ¡Êı¾İ
+     * å¼‚æ­¥è·å–æ•°æ®
      *
-     * @param pageIndex Ò³Âë
-     * @param callBack  Òì²½»ñÈ¡Êı¾İºóµÄ»Øµ÷ 
+     * @param pageIndex é¡µç 
+     * @param callBack  å¼‚æ­¥è·å–æ•°æ®åçš„å›è°ƒ 
      * callback.onResponse(list);
      * callback.onFailure(string);
      */
@@ -64,15 +64,15 @@ dependencies {
     protected void getListDataInThread(int pageIndex, final  NetCallBack<DataModel> callBack) {
     }
     /**
-     * ÉèÖÃrecyclerview µÄadapter
+     * è®¾ç½®recyclerview çš„adapter
      */
     @Override
     protected HHBaseRecyclerViewAdapter<DataModel> instanceAdapter(List<DataModel> list) {
-       //return ×Ô¼ºµÄadapter
+       //return è‡ªå·±çš„adapter
         return new MyAdapterDemo(getContext(), list);
     }
     /**
-     * ÉèÖÃitemÖ®¼äµÄ¾àÀë
+     * è®¾ç½®itemä¹‹é—´çš„è·ç¦»
      *
      * @return
      */
@@ -82,7 +82,7 @@ dependencies {
     }
 
     /**
-     * ÉèÖÃÃ¿Ò³»ñÈ¡Êı¾İµÄ´óĞ¡
+     * è®¾ç½®æ¯é¡µè·å–æ•°æ®çš„å¤§å°
      *
      * @return
      */
@@ -92,13 +92,13 @@ dependencies {
     }
 
     /**
-     * ÉèÖÃLayoutManagerÀàĞÍ£¬Ä¬ÈÏ2
-     * ¡¾
-     * 0£ºLinearLayoutManager £¬
-     * 1£ºGridLayoutManager£¬
-     * 2£ºStaggeredGridLayoutManager
-     * ¡¿
-     * ÉèÖÃ1¡¢2Ê±£¬setCount£¨£©·½·¨£¬ÉèÖÃÁĞÊı£¬Ä¬ÈÏ2
+     * è®¾ç½®LayoutManagerç±»å‹ï¼Œé»˜è®¤2
+     * ã€
+     * 0ï¼šLinearLayoutManager ï¼Œ
+     * 1ï¼šGridLayoutManagerï¼Œ
+     * 2ï¼šStaggeredGridLayoutManager
+     * ã€‘
+     * è®¾ç½®1ã€2æ—¶ï¼ŒsetCountï¼ˆï¼‰æ–¹æ³•ï¼Œè®¾ç½®åˆ—æ•°ï¼Œé»˜è®¤2
      *
      * @return
      */
@@ -108,7 +108,7 @@ dependencies {
     }
 
     /**
-     * ÉèÖÃÃ¿ĞĞÁĞÊı£¬Ä¬ÈÏ2
+     * è®¾ç½®æ¯è¡Œåˆ—æ•°ï¼Œé»˜è®¤2
      */
     @Override
     protected int setCount() {
@@ -116,75 +116,75 @@ dependencies {
     }
 ```
 
-## 2¡¢Fragment ¼Ì³Ğ HHBaseListRecyclerViewFragment £¬Ê¹ÓÃ·½·¨Óë Activity ¼Ì³ĞHHBaseListRecyclerViewActivityµÄÒ»ÖÂ¡£
-**ÓÃfragmentÀ´ÊµÏÖ£¬¿ÉÒÔÇ¶Ì×ÔÚÈÎÒâactivityÀïÊ¹ÓÃ¡£**
+## 2ã€Fragment ç»§æ‰¿ HHBaseListRecyclerViewFragment ï¼Œä½¿ç”¨æ–¹æ³•ä¸ Activity ç»§æ‰¿HHBaseListRecyclerViewActivityçš„ä¸€è‡´ã€‚
+**ç”¨fragmentæ¥å®ç°ï¼Œå¯ä»¥åµŒå¥—åœ¨ä»»æ„activityé‡Œä½¿ç”¨ã€‚**
 
 
-## 3¡¢adapter ¼Ì³Ğ HHBaseRecyclerViewAdapter : 
-Í¨¹ıÏÂÃæÁ½¸ö·½·¨¾Í¿ÉÒÔÊµÏÖview¸´ÓÃ£¬Êı¾İ°ó¶¨£¬¼òµ¥¸ßĞ§
+## 3ã€adapter ç»§æ‰¿ HHBaseRecyclerViewAdapter : 
+é€šè¿‡ä¸‹é¢ä¸¤ä¸ªæ–¹æ³•å°±å¯ä»¥å®ç°viewå¤ç”¨ï¼Œæ•°æ®ç»‘å®šï¼Œç®€å•é«˜æ•ˆ
 ```
     /**
-     * ÉèÖÃitem²¼¾Ö
+     * è®¾ç½®itemå¸ƒå±€
      */
     @Override
     protected int getViewHolderLaoutId() {
-        return R.layout.item;//×Ô¼ºµÄitem.xml
+        return R.layout.item;//è‡ªå·±çš„item.xml
     }
     /**
-     * °ó¶¨Êı¾İ
+     * ç»‘å®šæ•°æ®
      */
     @Override
     protected void bindViewHolderData(HHBaseViewHolder holder, int position) {
-    //Í¨¹ıholderµÃµ½¿Ø¼ş£¬Í¨¹ıpositionµÃµ½¶ÔÓ¦Êı¾İ£¬½øĞĞÊı¾İ°ó¶¨
+    //é€šè¿‡holderå¾—åˆ°æ§ä»¶ï¼Œé€šè¿‡positionå¾—åˆ°å¯¹åº”æ•°æ®ï¼Œè¿›è¡Œæ•°æ®ç»‘å®š
     }
 ```
-##4¡¢activity  ºÍ fragment ÖĞ¿ÉÒÔ×ÔÖ÷ÉèÖÃÒÔÏÂµÈ·½·¨¡£
+##4ã€activity  å’Œ fragment ä¸­å¯ä»¥è‡ªä¸»è®¾ç½®ä»¥ä¸‹ç­‰æ–¹æ³•ã€‚
 
 ```
     /**
-     * ÉèÖÃÊÇ·ñÏÂÀ­Ë¢ĞÂ
+     * è®¾ç½®æ˜¯å¦ä¸‹æ‹‰åˆ·æ–°
      */
     setIsRefresh(Boolean refresh)
 
     /**
-     * ÉèÖÃÊÇ·ñ¼ÓÔØ¸ü¶à
+     * è®¾ç½®æ˜¯å¦åŠ è½½æ›´å¤š
      *
-     * @param load_more trueÊÇ
+     * @param load_more trueæ˜¯
      */
     setIsLoadMore(Boolean load_more)
 
 
     /**
-     * ÉèÖÃµ×²¿¼ÓÔØ¸ü¶àµÄloading²¼¾Ö£¬²»ÉèÖÃÊ±£¬Ê¹ÓÃÄ¬ÈÏ²¼¾Ö
+     * è®¾ç½®åº•éƒ¨åŠ è½½æ›´å¤šçš„loadingå¸ƒå±€ï¼Œä¸è®¾ç½®æ—¶ï¼Œä½¿ç”¨é»˜è®¤å¸ƒå±€
      *
      * @param footView
      */
     setFootView(View footView)
 
     /**
-     * »ñÈ¡ÁĞ±íÊı¾İ
+     * è·å–åˆ—è¡¨æ•°æ®
      */
     getPagerListData()
 
     /**
-     * »ñÈ¡recyclerview
+     * è·å–recyclerview
      */
     getRecyclerView()
 
     /**
-     * Ë¢ĞÂÒ³ÃæÊı¾İ
+     * åˆ·æ–°é¡µé¢æ•°æ®
      */
     onRefresh()
     
     /**
-     * ÉèÖÃÒ³Âë
+     * è®¾ç½®é¡µç 
      *
      * @param pageIndex
      */
     setPageIndex(int pageIndex)
 
     /**
-     * µ±Ç°Ò³Âë
+     * å½“å‰é¡µç 
      */
     getPageIndex()
 ```
