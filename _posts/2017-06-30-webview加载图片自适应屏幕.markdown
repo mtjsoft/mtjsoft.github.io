@@ -7,8 +7,9 @@ author:  "Mtj"
 tags:
      Android
      WebView
+     
 ---
-### 百度过各种办法，就这个有效，亲测。
+* 百度过各种办法，就这个有效，亲测。
 ```
 webView.getSettings().setJavaScriptEnabled(true);
 
