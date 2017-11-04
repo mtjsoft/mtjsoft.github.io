@@ -1,3 +1,16 @@
+---
+layout: post
+title:  "webview自适应屏幕"
+subtitle:  "webview自适应屏幕"
+date:  2017-06-30
+author:  "Mtj"
+tags:
+     Android
+     SurfaceView
+     自定义camera
+     
+---
+
 * 布局文件不用说了，就它了SurfaceView。其他花里古哨的布局，自己想着加吧！
 
 ```
