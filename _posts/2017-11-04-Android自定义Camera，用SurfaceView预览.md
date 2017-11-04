@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "webview自适应屏幕"
-subtitle:  "webview自适应屏幕"
-date:  2017-06-30
+title:  "Android自定义Camera，用SurfaceView预览"
+subtitle:  "自定义Camera"
+date:  2017-11-04
 author:  "Mtj"
 tags:
      Android
