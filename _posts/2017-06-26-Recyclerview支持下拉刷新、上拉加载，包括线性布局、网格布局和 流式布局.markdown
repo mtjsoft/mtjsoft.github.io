@@ -8,14 +8,14 @@ tags:
      Android
      Recyclerview
      瀑布流
+     
 ---
-# SwiperefreshRecyclerview
-## 支持下拉刷新、上拉加载的 Recyclerview，包括线性布局、网格布局和 流布局。
-## 只需要在adapter中绑定数据，其他的交给我，就是这么6。
+* SwiperefreshRecyclerview
+* 支持下拉刷新、上拉加载的 Recyclerview，包括线性布局、网格布局和 流布局。只需要在adapter中绑定数据，其他的交给我，就是这么6。
 
-### To get a Git project into your build:
-### Step 1. Add the JitPack repository to your build file 
-### Add it in your root build.gradle at the end of repositories:
+* To get a Git project into your build:
+* Step 1. Add the JitPack repository to your build file 
+* Add it in your root build.gradle at the end of repositories:
 ```
 allprojects {
 	repositories {
@@ -24,22 +24,22 @@ allprojects {
 	}
 }      
 ```
-## Step 2. Add the dependency
+* Step 2. Add the dependency
 ```
 dependencies {     
   compile 'com.github.mtjsoft:SwiperefreshRecyclerview:1.1.0'
 }
 ```
-## GitHub 源码: [SwiperefreshRecyclerview源码](https://github.com/mtjsoft/SwiperefreshRecyclerview)
-## 使用 Demo: [SwiperefreshRecyclerviewDemo](https://github.com/mtjsoft/SwiperefreshRecyclerviewDemo)
-### 线性布局:
+* GitHub 源码: [SwiperefreshRecyclerview源码](https://github.com/mtjsoft/SwiperefreshRecyclerview)
+* 使用 Demo: [SwiperefreshRecyclerviewDemo](https://github.com/mtjsoft/SwiperefreshRecyclerviewDemo)
+* 线性布局:
 
 ![线性布局](http://img.blog.csdn.net/20170624131953706?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjg3NzkwODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-### 网格布局:
+* 网格布局:
 ![网格布局](http://img.blog.csdn.net/20170624132014859?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjg3NzkwODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-### 流式布局:
+* 流式布局:
 ![流式布局](http://img.blog.csdn.net/20170624132037025?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjg3NzkwODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-## 1、activity 继承 HHBaseListRecyclerViewActivity:
+* 1、activity 继承 HHBaseListRecyclerViewActivity:
  ①getListDataInThread()异步获取数据。
  ②setLayoutManagerType()方法即可实现  线性布局、网格布局 和 流布局。
 ```
@@ -107,11 +107,11 @@ dependencies {
     }
 ```
 
-## 2、Fragment 继承 HHBaseListRecyclerViewFragment ，使用方法与 Activity 继承HHBaseListRecyclerViewActivity的一致
+* 2、Fragment 继承 HHBaseListRecyclerViewFragment ，使用方法与 Activity 继承HHBaseListRecyclerViewActivity的一致
 **用fragment来实现，可以嵌套在任意activity里使用**
 
 
-## 3、adapter 继承 HHBaseRecyclerViewAdapter :
+* 3、adapter 继承 HHBaseRecyclerViewAdapter :
 **通过下面两个方法就可以实现view复用，数据绑定，简单高效**
 
 ```
@@ -130,7 +130,7 @@ dependencies {
     //通过holder得到控件，通过position得到对应数据，进行数据绑定
     }
 ```
-## 4、activity  和 fragment 中可以自主设置以下等方法。
+* 4、activity  和 fragment 中可以自主设置以下等方法。
 
 ```
     /**
