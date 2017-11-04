@@ -36,12 +36,17 @@ dependencies {
 
 ![线性布局](http://img.blog.csdn.net/20170624131953706?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjg3NzkwODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 * 网格布局:
+
 ![网格布局](http://img.blog.csdn.net/20170624132014859?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjg3NzkwODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 * 流式布局:
+
 ![流式布局](http://img.blog.csdn.net/20170624132037025?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjg3NzkwODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
 * 1、activity 继承 HHBaseListRecyclerViewActivity:
+
  ①getListDataInThread()异步获取数据。
  ②setLayoutManagerType()方法即可实现  线性布局、网格布局 和 流布局。
+ 
 ```
 /**
      * 异步获取数据
