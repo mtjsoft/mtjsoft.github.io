@@ -1,3 +1,15 @@
+---
+layout: post
+title:  "RecyclerView实现添加头部和底部"
+subtitle:  "RecyclerView、头部、底部"
+date:  2017-05-04 15:00
+author:  "Mtj"
+tags:
+     Android
+     Recyclerview
+     头部、底部
+     
+---
 # 1、主要用到下面四个方法。
 
 ![这里写图片描述](http://img.blog.csdn.net/20170504152947129?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjg3NzkwODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
