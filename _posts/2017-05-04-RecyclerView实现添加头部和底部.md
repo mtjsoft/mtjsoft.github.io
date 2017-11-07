@@ -10,18 +10,18 @@ tags:
      头部、底部
      
 ---
-# 1、主要用到下面四个方法。
+* 1、主要用到下面四个方法。
 
 ![这里写图片描述](http://img.blog.csdn.net/20170504152947129?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjg3NzkwODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
 ![这里写图片描述](http://img.blog.csdn.net/20170504153018176?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjg3NzkwODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-# 2、方法开源于 鸿洋_ 的这篇文章 [ Android 优雅的为RecyclerView添加HeaderView和FooterView ](http://blog.csdn.net/lmj623565791/article/details/51854533)
+* 2、方法开源于 鸿洋_ 的这篇文章 [ Android 优雅的为RecyclerView添加HeaderView和FooterView ](http://blog.csdn.net/lmj623565791/article/details/51854533)
 
-#  大神是通过类似装饰者模式，去设计一个类，在不改变原有的Adapter基础上去增强其功能，使其支持addHeaderView和addFooterView。
+*  大神是通过类似装饰者模式，去设计一个类，在不改变原有的Adapter基础上去增强其功能，使其支持addHeaderView和addFooterView。
 
-# 3、而此篇文章是直接对RecyclerView.Adapter动手，使其支持addHeaderView和addFooterView，removeHeaderView和removeFooterView。
+* 3、而此篇文章是直接对RecyclerView.Adapter动手，使其支持addHeaderView和addFooterView，removeHeaderView和removeFooterView。
 
-# 4、原理大神已给出，直接代码。直接继承此adapter即可。
+* 4、原理大神已给出，直接代码。直接继承此adapter即可。
 ```
 import java.util.List;
 
@@ -255,7 +255,7 @@ public abstract class BaseRecyclerViewAdapter<T> extends
 	}
 }
 ```
-# 5、文中用到的ViewHolder的封装
+* 5、文中用到的ViewHolder的封装
 
 ```
 import android.annotation.SuppressLint;
