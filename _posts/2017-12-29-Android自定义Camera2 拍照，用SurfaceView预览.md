@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Android自定义Camera2，用SurfaceView预览"
+title:  "Android自定义Camera2 拍照，用SurfaceView预览"
 subtitle:  "自定义Camera2"
 date:  2017-12-29
 author:  "Mtj"
