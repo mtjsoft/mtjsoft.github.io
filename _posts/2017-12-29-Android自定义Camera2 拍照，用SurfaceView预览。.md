@@ -1,17 +1,17 @@
 ---
 layout: post
-title:  "Android×Ô¶¨ÒåCamera2 ÅÄÕÕ£¬ÓÃSurfaceViewÔ¤ÀÀ¡£"
-subtitle:  "×Ô¶¨ÒåCamera2"
+title:  "Androidè‡ªå®šä¹‰Camera2 æ‹ç…§ï¼Œç”¨SurfaceViewé¢„è§ˆã€‚"
+subtitle:  "è‡ªå®šä¹‰Camera2"
 date:  2017-12-29 
 author:  "Mtj"
  tags:
      Android
      SurfaceView
-     ×Ô¶¨Òåcamera
-2     
+     è‡ªå®šä¹‰camera2    
+     
 ---
 
-* ²¼¾ÖÎÄ¼ş²»ÓÃËµÁË£¬¾ÍËüÁËSurfaceView¡£ÆäËû»¨Àï¹ÅÉÚµÄ²¼¾Ö£¬×Ô¼ºÏë×Å¼Ó°É£¡
+* å¸ƒå±€æ–‡ä»¶ä¸ç”¨è¯´äº†ï¼Œå°±å®ƒäº†SurfaceViewã€‚å…¶ä»–èŠ±é‡Œå¤å“¨çš„å¸ƒå±€ï¼Œè‡ªå·±æƒ³ç€åŠ å§ï¼
 
 ```
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -24,21 +24,21 @@ author:  "Mtj"
         android:layout_height="match_parent" />
 </RelativeLayout>
 ```
-* surfaceViewµÄfindViewById()µÄÊÂ¾Í²»ËµÁË£¬Ö±½Ó¿ªÊ¼Ô¤ÀÀµÄ´úÂë
+* surfaceViewçš„findViewById()çš„äº‹å°±ä¸è¯´äº†ï¼Œç›´æ¥å¼€å§‹é¢„è§ˆçš„ä»£ç 
 
 ```
-    //6.0¿ªÊ¼
+    //6.0å¼€å§‹
     private CameraManager manager;
     private Handler childHandler, mainHandler;
     private CameraDevice mCamera;
     private CaptureRequest.Builder mPreviewBuilder;
     private CameraCaptureSession mSession;
     private ImageReader mImageReader;
-    // ´´½¨ÅÄÕÕĞèÒªµÄCaptureRequest.Builder
+    // åˆ›å»ºæ‹ç…§éœ€è¦çš„CaptureRequest.Builder
     private CaptureRequest.Builder captureRequestBuilder;
-    //6.0½áÊø
+    //6.0ç»“æŸ
     
-    //ºÜ¶à¹ı³Ì¶¼±ä³ÉÁËÒì²½µÄÁË£¬ËùÒÔÕâÀïĞèÒªÒ»¸ö×ÓÏß³ÌµÄlooper
+    //å¾ˆå¤šè¿‡ç¨‹éƒ½å˜æˆäº†å¼‚æ­¥çš„äº†ï¼Œæ‰€ä»¥è¿™é‡Œéœ€è¦ä¸€ä¸ªå­çº¿ç¨‹çš„looper
     HandlerThread handlerThread = new HandlerThread("Camera2");
     handlerThread.start();
     childHandler = new Handler(handlerThread.getLooper());
@@ -50,13 +50,13 @@ author:  "Mtj"
             @Override
             public void surfaceCreated(SurfaceHolder surfaceHolder) {
                 try {
-                //ĞèÒªÏà»úÈ¨ÏŞ
+                //éœ€è¦ç›¸æœºæƒé™
                     if (ActivityCompat.checkSelfPermission(getPageContext(), Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
                         return;
                     }
-                    //»ñÈ¡¿ÉÓÃÏà»úÉè±¸ÁĞ±í
+                    //è·å–å¯ç”¨ç›¸æœºè®¾å¤‡åˆ—è¡¨
                     String[] CameraIdList = manager.getCameraIdList();
-                    //´ò¿ªÏà»ú
+                    //æ‰“å¼€ç›¸æœº
                     manager.openCamera(CameraIdList[0], mCameraDeviceStateCallback, mainHandler);
                 } catch (CameraAccessException e) {
                     e.printStackTrace();
@@ -70,37 +70,37 @@ author:  "Mtj"
 
             @Override
             public void surfaceDestroyed(SurfaceHolder surfaceHolder) {
-                //ÊÍ·Å×ÊÔ´
+                //é‡Šæ”¾èµ„æº
                 if (mCamera != null) {
                     mCamera.close();
                     mCamera = null;
                 }
             }
         });
-        //ÉèÖÃÕÕÆ¬µÄ´óĞ¡
+        //è®¾ç½®ç…§ç‰‡çš„å¤§å°
         mImageReader = ImageReader.newInstance(3264, 1840, ImageFormat.JPEG, 2);
         mImageReader.setOnImageAvailableListener(new ImageReader.OnImageAvailableListener() {
             @Override
             public void onImageAvailable(ImageReader imageReader) {
-                // ÄÃµ½ÅÄÕÕÕÕÆ¬Êı¾İ
+                // æ‹¿åˆ°æ‹ç…§ç…§ç‰‡æ•°æ®
                 Image image = imageReader.acquireNextImage();
                 ByteBuffer buffer = image.getPlanes()[0].getBuffer();
                 byte[] bytes = new byte[buffer.remaining()];
-                buffer.get(bytes);//ÓÉ»º³åÇø´æÈë×Ö½ÚÊı×é
+                buffer.get(bytes);//ç”±ç¼“å†²åŒºå­˜å…¥å­—èŠ‚æ•°ç»„
                 image.close();
-                //saveBitmap(bytes);//±£´æÕÕÆ¬µÄ´¦Àí
+                //saveBitmap(bytes);//ä¿å­˜ç…§ç‰‡çš„å¤„ç†
             }
         }, mainHandler);
 
 
 /**
-     * ÉãÏñÍ·´´½¨¼àÌı
+     * æ‘„åƒå¤´åˆ›å»ºç›‘å¬
      */
     private CameraDevice.StateCallback mCameraDeviceStateCallback = new CameraDevice.StateCallback() {
         @Override
-        public void onOpened(CameraDevice camera) {//´ò¿ªÉãÏñÍ·
+        public void onOpened(CameraDevice camera) {//æ‰“å¼€æ‘„åƒå¤´
             try {
-                //¿ªÆôÔ¤ÀÀ
+                //å¼€å¯é¢„è§ˆ
                 mCamera = camera;
                 startPreview(camera);
             } catch (CameraAccessException e) {
@@ -110,7 +110,7 @@ author:  "Mtj"
 
         @Override
         public void onDisconnected(CameraDevice camera) {
-            //¹Ø±ÕÉãÏñÍ·
+            //å…³é—­æ‘„åƒå¤´
             if (mCamera != null) {
                 mCamera.close();
                 mCamera = null;
@@ -119,26 +119,26 @@ author:  "Mtj"
 
         @Override
         public void onError(CameraDevice camera, int error) {
-            //·¢Éú´íÎó
+            //å‘ç”Ÿé”™è¯¯
         }
     };
 
-    //¿ªÊ¼Ô¤ÀÀ£¬Ö÷ÒªÊÇcamera.createCaptureSessionÕâ¶Î´úÂëºÜÖØÒª£¬´´½¨»á»°
+    //å¼€å§‹é¢„è§ˆï¼Œä¸»è¦æ˜¯camera.createCaptureSessionè¿™æ®µä»£ç å¾ˆé‡è¦ï¼Œåˆ›å»ºä¼šè¯
     private void startPreview(final CameraDevice camera) throws CameraAccessException {
         try {
-            // ´´½¨Ô¤ÀÀĞèÒªµÄCaptureRequest.Builder
+            // åˆ›å»ºé¢„è§ˆéœ€è¦çš„CaptureRequest.Builder
             mPreviewBuilder = camera.createCaptureRequest(CameraDevice.TEMPLATE_PREVIEW);
-            // ½«SurfaceViewµÄsurface×÷ÎªCaptureRequest.BuilderµÄÄ¿±ê
+            // å°†SurfaceViewçš„surfaceä½œä¸ºCaptureRequest.Builderçš„ç›®æ ‡
             mPreviewBuilder.addTarget(holder.getSurface());
             mPreviewBuilder.set(CaptureRequest.CONTROL_AF_MODE, CaptureRequest.CONTROL_AF_MODE_OFF);
             mPreviewBuilder.set(CaptureRequest.CONTROL_AE_MODE, CaptureRequest.CONTROL_AE_MODE_OFF);
-            //ÉèÖÃÅÄÉãÍ¼ÏñÊ±Ïà»úÉè±¸ÊÇ·ñÊ¹ÓÃ¹âÑ§·À¶¶£¨OIS£©¡£
+            //è®¾ç½®æ‹æ‘„å›¾åƒæ—¶ç›¸æœºè®¾å¤‡æ˜¯å¦ä½¿ç”¨å…‰å­¦é˜²æŠ–ï¼ˆOISï¼‰ã€‚
             mPreviewBuilder.set(CaptureRequest.LENS_OPTICAL_STABILIZATION_MODE, CaptureRequest.LENS_OPTICAL_STABILIZATION_MODE_ON);
-            //¸Ğ¹âÁéÃô¶È
+            //æ„Ÿå…‰çµæ•åº¦
             mPreviewBuilder.set(CaptureRequest.SENSOR_SENSITIVITY, 1600);
-            //ÆØ¹â²¹³¥//
+            //æ›å…‰è¡¥å¿//
             mPreviewBuilder.set(CaptureRequest.CONTROL_AE_EXPOSURE_COMPENSATION, 0);
-            // ´´½¨CameraCaptureSession£¬¸Ã¶ÔÏó¸ºÔğ¹ÜÀí´¦ÀíÔ¤ÀÀÇëÇóºÍÅÄÕÕÇëÇó
+            // åˆ›å»ºCameraCaptureSessionï¼Œè¯¥å¯¹è±¡è´Ÿè´£ç®¡ç†å¤„ç†é¢„è§ˆè¯·æ±‚å’Œæ‹ç…§è¯·æ±‚
             camera.createCaptureSession(Arrays.asList(holder.getSurface(), mImageReader.getSurface()), mSessionStateCallback, childHandler);
         } catch (CameraAccessException e) {
             e.printStackTrace();
@@ -146,7 +146,7 @@ author:  "Mtj"
     }
 
     /**
-     * »á»°×´Ì¬»Øµ÷
+     * ä¼šè¯çŠ¶æ€å›è°ƒ
      */
     private CameraCaptureSession.StateCallback mSessionStateCallback = new CameraCaptureSession.StateCallback() {
         @Override
@@ -155,15 +155,15 @@ author:  "Mtj"
             if (mCamera != null && captureRequestBuilder == null) {
                 try {
                     captureRequestBuilder = mCamera.createCaptureRequest(CameraDevice.TEMPLATE_STILL_CAPTURE);
-                    // ½«imageReaderµÄsurface×÷ÎªCaptureRequest.BuilderµÄÄ¿±ê
+                    // å°†imageReaderçš„surfaceä½œä¸ºCaptureRequest.Builderçš„ç›®æ ‡
                     captureRequestBuilder.addTarget(mImageReader.getSurface());
-                    //¹Ø±Õ×Ô¶¯¶Ô½¹
+                    //å…³é—­è‡ªåŠ¨å¯¹ç„¦
                     captureRequestBuilder.set(CaptureRequest.CONTROL_AF_MODE, CaptureRequest.CONTROL_AF_MODE_OFF);
                     captureRequestBuilder.set(CaptureRequest.CONTROL_AE_MODE, CaptureRequest.CONTROL_AE_MODE_OFF);
-                    //ÉèÖÃÅÄÉãÍ¼ÏñÊ±Ïà»úÉè±¸ÊÇ·ñÊ¹ÓÃ¹âÑ§·À¶¶£¨OIS£©¡£
+                    //è®¾ç½®æ‹æ‘„å›¾åƒæ—¶ç›¸æœºè®¾å¤‡æ˜¯å¦ä½¿ç”¨å…‰å­¦é˜²æŠ–ï¼ˆOISï¼‰ã€‚
                   captureRequestBuilder.set(CaptureRequest.LENS_OPTICAL_STABILIZATION_MODE, CaptureRequest.LENS_OPTICAL_STABILIZATION_MODE_ON);
                     captureRequestBuilder.set(CaptureRequest.SENSOR_SENSITIVITY, valueISO);
-                    //ÆØ¹â²¹³¥//
+                    //æ›å…‰è¡¥å¿//
                  captureRequestBuilder.set(CaptureRequest.CONTROL_AE_EXPOSURE_COMPENSATION, 0);
                 } catch (CameraAccessException e) {
                     e.printStackTrace();
@@ -183,7 +183,7 @@ author:  "Mtj"
     };
 
 /**
-     * ¸üĞÂ»á»°£¬¿ªÆôÔ¤ÀÀ
+     * æ›´æ–°ä¼šè¯ï¼Œå¼€å¯é¢„è§ˆ
      *
      * @param session
      * @throws CameraAccessException
@@ -192,22 +192,22 @@ author:  "Mtj"
         session.setRepeatingRequest(mPreviewBuilder.build(), mCaptureCallback, childHandler);
     }
 ```
-*  Ô¤ÀÀÒÑ¾­OKÁË¡£¼òµ¥ÖÁ¼«°É¡£
-* ÏÂÃæÊÇÒ»¸öcameraÅÄÕÕµÄ·½·¨£º 
+*  é¢„è§ˆå·²ç»OKäº†ã€‚ç®€å•è‡³æå§ã€‚
+* ä¸‹é¢æ˜¯ä¸€ä¸ªcameraæ‹ç…§çš„æ–¹æ³•ï¼š 
 
 ```
     /**
-     * µ¥ÅÄÕÕÆ¬
+     * å•æ‹ç…§ç‰‡
      */
     private void takePicture() {
         if (mCamera == null) {
             return;
         }
         if (mSession != null && captureRequestBuilder != null) {
-            //ÅÄÕÕ
+            //æ‹ç…§
             try {
                 CaptureRequest cr = captureRequestBuilder.build();
-                mSession.capture(cr, null, null);//µ¥ÅÄAPI£¬Ò²¿ÉÒÔµ÷Á¬ÅÄµÄÅ¶
+                mSession.capture(cr, null, null);//å•æ‹APIï¼Œä¹Ÿå¯ä»¥è°ƒè¿æ‹çš„å“¦
             } catch (CameraAccessException e) {
                 e.printStackTrace();
             }
@@ -215,10 +215,10 @@ author:  "Mtj"
     }
 ```
 
-* OKÅÄÕÕÒ²¿ÉÒÔÁË£¬ÔÙÀ´¾ÍÊÇµ¥¶À¿ØÖÆÉÁ¹âµÆµÄ¿ªÆôºÍ¹Ø±ÕÁË
+* OKæ‹ç…§ä¹Ÿå¯ä»¥äº†ï¼Œå†æ¥å°±æ˜¯å•ç‹¬æ§åˆ¶é—ªå…‰ç¯çš„å¼€å¯å’Œå…³é—­äº†
 ```
 /**
-     * 6.0¿ª
+     * 6.0å¼€
      */
     public void openLight6() {
         try {
@@ -231,7 +231,7 @@ author:  "Mtj"
     }
 
     /**
-     * 6.0¹Ø
+     * 6.0å…³
      */
     public void closeLight6() {
         try {
@@ -243,5 +243,5 @@ author:  "Mtj"
         }
     }
 ```
-* OK£¬×Ô¶¨Òåcamera2 ÅÄÕÕÔ¤ÀÀ¾ÍÍê³ÉÁË¡£
+* OKï¼Œè‡ªå®šä¹‰camera2 æ‹ç…§é¢„è§ˆå°±å®Œæˆäº†ã€‚
 
