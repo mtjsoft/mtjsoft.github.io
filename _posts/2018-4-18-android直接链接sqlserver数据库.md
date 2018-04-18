@@ -1,4 +1,17 @@
-﻿## 1、开发中遇到需要android端直接链接服务端sqlserver数据库，并向sqlserver数据库插入数据的场景。
+---
+layout: post
+title:  "android直接链接sqlserver数据库"
+subtitle:  "android sqlserver 数据库"
+date:  2018-04-18
+author:  "Mtj"
+tags:
+     android
+     sqlserver
+     数据库
+     
+---
+
+## 1、开发中遇到需要android端直接链接服务端sqlserver数据库，并向sqlserver数据库插入数据的场景。
 
 ### 2、链接到sqlserver数据库，需要用到 jtds 工具包，我使用的是 [jtds-1.3.1.jar](https://pan.baidu.com/s/1ihwXmVNG-YyJTKlTwrPz1w)。点击百度网盘下载，密码： fma7
 
